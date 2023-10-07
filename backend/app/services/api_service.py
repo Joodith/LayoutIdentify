@@ -1,6 +1,10 @@
 from backend.app.services.arrange_service import ProductArrangeService
 from backend.app.services.errors import ProductNotRecognisedError
 
+"""
+    ShellIdentification service determines all product arrangements for the given 2D layout
+"""
+
 
 class ShelfIdentificationService:
     def __init__(self, layout2D):
@@ -39,6 +43,6 @@ class ShelfIdentificationService:
         try:
             arrange_service = ProductArrangeService(shelf_identify_obj, self.layout2D[row][col])
         except Exception as e:
-            return ProductNotRecognisedError(self.layout2D[row][col],str(e))
+            return ProductNotRecognisedError(self.layout2D[row][col], str(e))
         arrangement = arrange_service.find_pattern(row, col)
         return arrangement

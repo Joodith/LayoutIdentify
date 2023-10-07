@@ -9,6 +9,9 @@ RIGHT_MOVE = 1
 BOTTOM_MOVE = 2
 TOP_MOVE = 3
 
+"""
+     Product Arrange Service is the pattern detector for each product pattern
+"""
 
 class ProductArrangeService:
     def __init__(self, shelf_identification_service, product_repr):
