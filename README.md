@@ -27,6 +27,29 @@ Request body:A 2D array representing shelf layout
 
 Respose: Shape and Location of each of the arranged product pattern
 
+**Main app** : backend/app/main.py
+
+**Services** : backend/app/services
+
+**Tests**   : backend/app/test_main.py
+
+**product_names.json** - Json File carrying the brand representations and their original names.Only those product patterns are recognised during pattern detection.Otherwise error message is returned for the
+product
+
+**config.py**        -  Common variables that are used across the module
+
+sample_input_for_test -Python file defining variables for test inputs and outputs
+
+**Services:**
+
+**api_service.py** is responsible for initialising and defining the layout.For a given layout,it has list of product arrangements.
+
+**arrange_service.py** is responsible for deducing the pattern of a given brand and identifies it's shape as RECTANGLE,SQUARE,POLYGON etc...
+
+It also identifies the location of the product group as top left,right,etc..
+ 
+
+
 **TESTS:**
 
 Sample inputs and expected output are verified through the test file "backend/app/test_main.py"
